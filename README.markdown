@@ -6,7 +6,8 @@ To solve the problems I spent a lot of time searching the web, reading books and
 using [REPL](http://www.javacodegeeks.com/2011/09/scala-tutorial-scala-repl-expressions.html) to quickly identify the source of the problem and developing solutions).
 
 I have gathered together all of the pieces of information under general headings to both remind
-myself of the solutions, and to help anybody else who runs into similar problems.
+myself of the solutions I developed ( I am sure that there are better solutions), 
+and to help anybody else who runs into similar problems.
 
 # Background
 
