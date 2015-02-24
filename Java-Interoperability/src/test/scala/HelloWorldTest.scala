@@ -5,6 +5,9 @@
 
 package com.example.scalajavatest
 
+import java.util.ArrayList
+import scala.collection.JavaConverters._
+
 import com.example.scalaworld._
 import com.example.javaworld._
 
@@ -13,34 +16,56 @@ import org.scalatest.matchers.ShouldMatchers
 
 class HelloWorldTest extends FunSpec with ShouldMatchers {
 
-    describe("Checking the function of an object") {
+    describe("Checking the Scala object") {
     
-       it("checking that the test is working") {
+       it("Checking that the reply() method is working") {
        
-          val hi = ScalaHelloWorld("Hello")
-       
-          val text: String = "Hello"
-       
-          hi.reply should be("Scala World: Hello")
+          val hello = ScalaHelloWorld("Hello")
+
+          hello.reply should be("Hello from Scala World: Hello")
        
        }
                
     }
     
     
-    describe("Added a second test") {
+    describe("Checking the Java object") {
     
-       it("checking that a second test could be added"){
+       it("Checking that the reply() method is working"){
        
-         val test: String = "Hello"
+         val javaWorld = new JavaHelloWorld()
          
-         info("string defined")
-       
-         test should be("Hello")
+         val result: String = javaWorld.reply("Hello")
+  
+         result should be("Hello from Java World: Hello")
     
-       }     
+       }  
+       
+       it("Checking that the method to convert a list to uppercase is working"){
+       
+         info("still to do")
+         
+         val javaWorld = new JavaHelloWorld()
+         
+         val listNames = List("NameOne", "NameTwo", "NameThree")
+         
+         val javaListNames = new ArrayList( listNames.asJava )
+            
+         var javaUpperCaseListNames = javaWorld.listToUpperCase( javaListNames )
+           
+         var listUpperCaseNames = javaUpperCaseListNames.asScala.toList
+         
+         listNames(0).toUpperCase should equal (listUpperCaseNames(0))
+       
+       }   
     
     }
+    
+    
+    
+    
+    
+    
   
 
 }
