@@ -19,7 +19,7 @@ and to help anybody else who runs into similar problems.
 
 # Notes
 
-* [Scala - Java Interoperability](/Java-Interoperability/README.markdown) - accessing Java Libraries from Scala.
+* [Scala - Java Interoperability](/Java-Interoperability) - accessing Java Libraries from Scala.
 
 
 # Licence
