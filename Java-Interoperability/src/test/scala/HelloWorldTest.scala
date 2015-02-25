@@ -2,7 +2,6 @@
 //
 //
 
-
 package com.example.scalajavatest
 
 import java.util.ArrayList
@@ -27,8 +26,7 @@ class HelloWorldTest extends FunSpec with ShouldMatchers {
        }
                
     }
-    
-    
+        
     describe("Checking the Java object") {
     
        it("Checking that the reply() method is working"){
@@ -58,14 +56,5 @@ class HelloWorldTest extends FunSpec with ShouldMatchers {
          listNames(0).toUpperCase should equal (listUpperCaseNames(0))
        
        }   
-    
     }
-    
-    
-    
-    
-    
-    
-  
-
 }
