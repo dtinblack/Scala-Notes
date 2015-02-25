@@ -1,15 +1,19 @@
 # Scala Java Interoperability
 
-The following information helped to write software used to access
-Java libraries from Scala. 
+Sometimes we have to get access to Java Libraries, usually to save development time. Although it should be 
+straight forward to use the interoperability aspects of Scala and Java very often problems arise due to a 
+lack of understanding between the differences of some of the concepts used by the two programming languages. 
+This note has taken the information from the sources below to produce the working example shown in the folder.
+
+
 
 # Background
 
 The following information helped to develop the example software shown in the folders ( big thanks to all of the 
 authors).
 
-* [Chapter 29](http://www.artima.com/pins1ed/combining-scala-and-java.html) from [Programming in Scala](http://www.artima.com/pins1ed/index.html)
-, First Edition which describes how Scala is translated to Java, and the use of Java annotations in Scala.
+* [Chapter 29](http://www.artima.com/pins1ed/combining-scala-and-java.html) from [Programming in Scala, First Edition](http://www.artima.com/pins1ed/index.html)
+ which describes how Scala is translated to Java, and the use of Java annotations in Scala.
 * Daniel Spiewak's Blog [Interop Between Java and Scala](http://www.codecommit.com/blog/java/interop-between-java-and-scala) which covers Classes,
 Traits, etc with examples.
 * Information from [Twitter School](https://twitter.github.io/scala_school/java.html) that covers Java 

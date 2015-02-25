@@ -7,7 +7,7 @@ usually using [REPL](http://www.javacodegeeks.com/2011/09/scala-tutorial-scala-r
 identify the source of the problem and developing some solutions.
 
 I have gathered together all of the pieces of information, under general headings, to both remind
-myself of the solutions I developed ( I am sure that there are better solutions), 
+myself of the solutions I developed ( I am sure that there are better solutions ), 
 and to help anybody else who runs into similar problems.
 
 # Software
