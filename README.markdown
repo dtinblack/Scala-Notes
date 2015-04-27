@@ -20,6 +20,7 @@ and to help anybody else who runs into similar problems.
 # Notes
 
 * [Scala - Java Interoperability](/Java-Interoperability) - accessing Java Libraries from Scala.
+* [Scala-Variance](/Variance) - notes about Variance and Bounds.
 
 
 # Licence
