@@ -21,6 +21,7 @@ and to help anybody else who runs into similar problems.
 
 * [Scala - Java Interoperability](/Java-Interoperability) - accessing Java Libraries from Scala.
 * [Scala-Variance](/Variance) - notes about Variance and Bounds.
+* [Miscellaneous](/Miscellaneous) - collection of scala programming techniques.
 
 
 # Licence
