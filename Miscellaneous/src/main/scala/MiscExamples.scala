@@ -32,6 +32,18 @@ object MiscExample {
      
      println( name1.output("hello") )
      
+  // Testing Functional techniques
+  
+     val funcTest = new Functions   
+     
+     val lst = List(1,2,3,4,5,6)
+     
+     /* sum the values ina  List */
+     
+     val add = (x: Int, y:Int ) => x + y
+     
+     println( funcTest.reduce(add, lst, 0) )
+          
    // difference between a method and a function
     
       val test = new Test

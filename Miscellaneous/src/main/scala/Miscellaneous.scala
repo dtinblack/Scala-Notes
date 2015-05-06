@@ -59,6 +59,20 @@ case class Operator( op: String ) {
     def p(args: String) = sc.s( args + " world!" )
   }
   
+    
+}
+
+// Checking functional techniques
+
+class Functions {
+
+
+  def reduce(f:(Int, Int) => Int, l: List[Int], s:Int):Int = l match {
+      case Nil => s
+      case a::b::tail => reduce(f, tail, s + f(a, b) )
+      case _ => -9999
+  } 
+
 }
 
 // Difference between a method and a function
@@ -111,7 +125,6 @@ class PolymorphicFunctions {
 class HigherRank {
 
     
-
    def rankOne[A](f: A => A, a: A ): A = f(a)
    
    trait ~>[F[_],G[_]] {
@@ -126,8 +139,6 @@ class HigherRank {
 
     def rankTwo[B](f: Id ~> List, b: B, s: String): (List[B], List[String]) =
      (f(b), f(s))
-
-
 
 
 }
