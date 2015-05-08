@@ -10,7 +10,7 @@ A collection of pieces of code that I have gathered together to improve my under
 * Difference between a function and a methode - see Test.
 * Examples of Polymorphic Functions ( taken from [Functional Programming in Scala](http://www.manning.com/bjarnason/) )- see PolymorphicFunctions.
 * Higher Ranked Polymorphism ( taken from [Higher-Rank Polymorphism in Scala](https://apocalisp.wordpress.com/2010/07/02/higher-rank-polymorphism-in-scala/) ) - see HigherRank.
-
+* Ordering from [Basics Comparable/Ordered](http://like-a-boss.net/2012/07/30/ordering-and-ordered-in-scala.html) - see Box and sortBox.
 
 # Background
 

@@ -87,7 +87,20 @@ object MiscExample {
       println( higherrank.rankOne( square, 5 ) )
       
       println( higherrank.rankTwo( higherrank.singletonList, 10, "Hello, World!") )
-                
+      
+    // Ordering example
+    
+      val listBoxes = List(IntBox(1), IntBox(2), IntBox(3), IntBox(4), IntBox(1))
+      
+      println( listBoxes )  
+                      
+      println( boxSort( listBoxes ) )
+            
+      val b1 = IntBox( 6 )
+      
+      val b2 = IntBox( 7 )
+      
+      println( b1 + b2 )        
                     
    }
 } 

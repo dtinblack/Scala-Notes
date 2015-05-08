@@ -144,11 +144,45 @@ class HigherRank {
 }
 
 
+// Ordering 
 
+trait Box[+T] {
 
+  def value: T
 
+}
 
+class Sort[T](ordering: Ordering[Box[T]]){
 
+   def apply(boxes: Seq[Box[T]]) = {
+      boxes.sorted(ordering)
+    }  
+
+}
+
+class BoxOrdering[T](ordering: Ordering[T]) extends Ordering[Box[T]] {
+
+   def compare(x: Box[T], y: Box[T]):Int = ordering.compare(x.value, y.value)
+
+}
+
+case class IntBox(value: Int) extends Box[Int] {
+
+  def +(other: IntBox ) = IntBox(value + other.value)
+
+}
+
+object boxSort {
+
+    def apply[T](boxes: Seq[Box[T]])(implicit ordering: Ordering[T]) = {
+    
+    val boxOrdering = new BoxOrdering(ordering)
+    
+    boxes.sorted(boxOrdering)
+    
+    }
+
+}
    
    
    
