@@ -1,14 +1,13 @@
 # Trees
 
-A series of examples of Tree data structures:
+Examples of Tree data structures:
 
 * Basic Tree Structure - see Tree.
-* Binary Search Tree ( from [Data Structures in Scala](http://www.slideshare.net/knoldus/data-structuresscala) ) - see BSTree.
+* Binary Search Tree ( from [Data Structures in Scala](http://www.slideshare.net/knoldus/data-structuresscala) ) - see BSTree with 
+compare method taken from [elegant solution to compare 2 binary tree's, and returning false at the earliest time](http://stackoverflow.com/questions/15706904/elegant-solution-to-compare-2-binary-trees-and-returning-false-at-the-earliest).
 
-* TO DO [elegant solution to compare 2 binary tree's, and returning false at the earliest time](http://stackoverflow.com/questions/15706904/elegant-solution-to-compare-2-binary-trees-and-returning-false-at-the-earliest)
-* TO DO [Merge binary trees in Scala](http://stackoverflow.com/questions/23849602/merge-binary-trees-in-scala)
-
-* TO DO [A basic, immutable Set in Scala](http://amitdev.github.io/coding/2014/01/20/Functional-Set/)
+* TO READ [Merge binary trees in Scala](http://stackoverflow.com/questions/23849602/merge-binary-trees-in-scala)
+* TO READ [A basic, immutable Set in Scala](http://amitdev.github.io/coding/2014/01/20/Functional-Set/)
 
 # Background
 
