@@ -58,8 +58,7 @@ case class Operator( op: String ) {
   implicit class Output(val sc: StringContext) {
     def p(args: String) = sc.s( args + " world!" )
   }
-  
-    
+      
 }
 
 // Checking functional techniques
@@ -122,9 +121,7 @@ class PolymorphicFunctions {
 
 // Higher-Rank Polymorphisim
 
-class HigherRank {
-
-    
+class HigherRank {   
    def rankOne[A](f: A => A, a: A ): A = f(a)
    
    trait ~>[F[_],G[_]] {
@@ -140,9 +137,7 @@ class HigherRank {
     def rankTwo[B](f: Id ~> List, b: B, s: String): (List[B], List[String]) =
      (f(b), f(s))
 
-
 }
-
 
 // Ordering 
 
@@ -184,5 +179,49 @@ object boxSort {
 
 }
    
+// Using a class in the "background" to manage objects
+
+
+case class Sand(id: Int)
+case class Bucket[+A]( sand: Sand )
+
+sealed abstract class Sandpit[+A] {
+
+   def isEmpty: Boolean
    
+   def &:[A](b: Bucket[A]): Sandpit[A] = new &:(b, this )
+
+}
+
+case object Empty extends Sandpit[Nothing] {
+
+    override def isEmpty = true
+
+}
+
+case class &:[A](b: Bucket[A], s: Sandpit[A]) extends Sandpit {
+
+     override def isEmpty = false
+     
+} 
+
+object Sandpit {
+
+   def empty[A]: Sandpit[A] = Empty
+   
+   def apply[A]( in: Int, s: Sandpit[A] = Empty): Sandpit[A] = 
+       new &:( Bucket( Sand( in ) ) , s )
+   
+   
+}   
+
+
+
+
+
+
+
+
+
+  
    

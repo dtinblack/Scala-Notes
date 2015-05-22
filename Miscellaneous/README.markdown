@@ -11,6 +11,8 @@ A collection of pieces of code that I have gathered together to improve my under
 * Examples of Polymorphic Functions ( taken from [Functional Programming in Scala](http://www.manning.com/bjarnason/) )- see PolymorphicFunctions.
 * Higher Ranked Polymorphism ( taken from [Higher-Rank Polymorphism in Scala](https://apocalisp.wordpress.com/2010/07/02/higher-rank-polymorphism-in-scala/) ) - see HigherRank.
 * Ordering from [Basics Comparable/Ordered](http://like-a-boss.net/2012/07/30/ordering-and-ordered-in-scala.html) - see Box and sortBox.
+* Using an object to manage other objects ( approach adapted from [Purely functional graph data structure in Scala](http://hs.ljungblad.nu/post/64133088058/purely-functional-graph-data-structure-in-scala) - see Sand and Sandpit.
+
 
 # Background
 

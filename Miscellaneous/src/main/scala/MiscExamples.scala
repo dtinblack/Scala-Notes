@@ -100,8 +100,18 @@ object MiscExample {
       
       val b2 = IntBox( 7 )
       
-      println( b1 + b2 )        
-                    
+      println( b1 + b2 ) 
+      
+    // Using an object in the background to manage other objects - see Class Sandpit
+        
+      val sand = Bucket( Sand( 1 ) ) &: 
+                 Bucket( Sand( 2 ) ) &:
+                 Bucket( Sand( 3 ) ) &:
+                 Empty
+                 
+      println( sand ) 
+      
+                            
    }
 } 
 
