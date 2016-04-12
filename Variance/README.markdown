@@ -38,6 +38,8 @@ behind variance.
 * A series of posts titled Scala Type Variances: [Part 1](http://www.jayway.com/2011/10/03/scala-type-variances-part-one/) covering Covariance, [Part 2](http://www.jayway.com/2011/10/04/scala-type-variances-part-two/) Contravariant Subtyping,
 and [Part 3](http://www.jayway.com/2011/10/05/scala-type-variances-part-three/) lower bounds. 
 
+* A tutorial on the Scala Type System including Variance ( summarises some of the links above ): [Academes to English: A Practical Tour of Scala's Type System](https://speakerdeck.com/heathermiller/academese-to-english-a-practical-tour-of-scalas-type-system)
+
 # Licence
 
 [See Licence](/LICENSE)
