@@ -5,7 +5,7 @@ Series of notes about Scala's Type System ( based on [Heather Mill](https://gith
 
 ### Notes
 
-* [Scala's pre-defined types](/Pre-defined)
+* [Scala's pre-defined types](/TypeSystem/Pre-defined)
 * [Defining own types](/OwnTypes)
 * [Parameterized types]()
 * [Bounds]()
