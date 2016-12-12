@@ -20,8 +20,6 @@ and to help anybody else who runs into similar problems.
 # Notes
 
 * [Scala - Java Interoperability](/Java-Interoperability) - accessing Java Libraries from Scala.
-* [Scala-Variance](/Variance) - notes about Variance and Bounds.
-* [SML](/SML) - an exercise in converting SML to Scala.
 * [Trees](/Trees) - examples of Tree data structures.
 * [Miscellaneous](/Miscellaneous) - collection of scala programming techniques.
 * [Mathematics](/Mathematics) - matrix and differential equations.
