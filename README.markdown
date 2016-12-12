@@ -19,6 +19,7 @@ and to help anybody else who runs into similar problems.
 
 # Notes
 
+* [Type System](/TypeSystem) - examples of the different types systems.
 * [Scala - Java Interoperability](/Java-Interoperability) - accessing Java Libraries from Scala.
 * [Trees](/Trees) - examples of Tree data structures.
 * [Miscellaneous](/Miscellaneous) - collection of scala programming techniques.
