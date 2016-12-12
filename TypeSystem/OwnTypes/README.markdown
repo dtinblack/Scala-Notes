@@ -5,7 +5,7 @@ Series of notes about Scala's Type System ( based on [Heather Mill](https://gith
 
 ### Notes
 
-* [Scala's pre-defined types](/Pre-defined/)
+* [Scala's pre-defined types](/Pre-defined/README.markdown)
 * [Defining own types](/OwnTypes)
 * [Parameterized types]()
 * [Bounds]()
@@ -22,7 +22,7 @@ Series of notes about Scala's Type System ( based on [Heather Mill](https://gith
 
 ### Thanks
 
-[Chapter 3: Types](https://www.scala-lang.org/files/archive/spec/2.11/03-types.html#paths) - specification of the Scala language describes some of the different types with examples.
+[Chapter 3: Types](https://www.scala-lang.org/files/archive/spec/2.11/03-types.html#paths) - specification of tghe Scala language describes some of the different types with examples.
 
 ### Licence
 
