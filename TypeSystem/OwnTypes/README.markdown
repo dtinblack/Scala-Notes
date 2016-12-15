@@ -1,51 +1,18 @@
-## Own Types
+## Defining Own Types
+
+Notes of defining own data types.
 
 ### Notes
 
-#### Refinement Types
-
-In Scala you can do the following:
-
-```
-def doSomething(x : { def bar: Unit }) = ...
-```
-
-which is called structural typing - the doSomething method puts a constraint on the structure of objects that maybe passed to it. However, in Scala the above is shorthand for the following refinement type:
-
-```
-def doSomething(x : AnyRef { def bar: Unit }) = ...
-```
-
-which says that x must be a subtype of AnyRef and must have a bar method. The type of x is a "refinement" of AnyRef with an additional constraint.
-
-
-#### Type alias
-
-The following example shows one of the  uses of the keyword 'type'
-
-```
-trait Box {
-   type A
-   def name: A
-}
-
-class ShoeBox extends Box {
-    type A = String
-    def name: A = "Shoe Box"
-}
-```
-
 ### Thanks
 
-[Scala Annotations](http://docs.scala-lang.org/style/types.html#annotations) - describes the use of annotations.
+[Java Has Type Inference and Refinement Types ( But With Strange Restriction)](http://james-iry.blogspot.co.uk/2009/04/java-has-type-inference-and-refinement.html) - discusses refinement types and structural constraints.
 
-[Programming  in Scala - Abstract Members](http://www.artima.com/pins1ed/abstract-members.html) - includes examples of using the keyword 'type'.
+[AdvancedScalaObjects](http://naildrivin5.com/scalatour/wiki_pages/AdvancedScalaObjects/) - describes the use of apply() and unapply() with examples, in particular pattern matching.
 
-[Real-world Scala: Dependency Injection (DI)](http://jonasboner.com/real-world-scala-dependency-injection-di/) - adapted approach used in the notes.
+[Extractor Objects](http://docs.scala-lang.org/tutorials/tour/extractor-objects.html) - simple example showing how apply() and unapply() works with reference to the return type for unapply().
 
-[Java Has Type Inference and Refinement Types ( But With Strange Restrictions)](http://james-iry.blogspot.co.uk/2009/04/java-has-type-inference-and-refinement.html) - describes 'Refinement Types'.
-
-[AdvancedScalaObjects](http://naildrivin5.com/scalatour/wiki_pages/AdvancedScalaObjects/) - step-by-step description of the difference between 'case class' and class.
+[Real-World Scala: Dependency Injection (DI)](http://jonasboner.com/real-world-scala-dependency-injection-di/) - describes how tou use Dependency Injection with examples involving 'implicits'.
 
 
 ### Licence
