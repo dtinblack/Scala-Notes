@@ -2,8 +2,6 @@
 
 object OwnTypes {
 
-
-
     def main(args: Array[String]){
 
       println("Program started ...")
@@ -11,21 +9,6 @@ object OwnTypes {
 
 
 
-    }
+    } // End of main
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
+}  // End of OwnTypes

@@ -2,8 +2,6 @@
 
 Notes of defining own data types.
 
-### Notes
-
 ### Thanks
 
 [Java Has Type Inference and Refinement Types ( But With Strange Restriction)](http://james-iry.blogspot.co.uk/2009/04/java-has-type-inference-and-refinement.html) - discusses refinement types and structural constraints.
