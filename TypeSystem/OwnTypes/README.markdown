@@ -1,6 +1,6 @@
 ## Defining Own Types
 
-Notes of defining own data types.
+Notes about defining own data types.
 
 ### Thanks
 
