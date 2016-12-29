@@ -38,6 +38,19 @@ and to help anybody else who runs into similar problems.
     <pre><code>scala -Xshow-phases
     </code></pre>
 
+# Background
+
+[Programming in Scala](http://www.lirmm.fr/~ducour/Doc-objets/scalabook.pdf) - first edition.
+
+[10 Scala One Liners to Impress Your Friends](https://gist.github.com/mkaz/d11f8f08719d6d27bab5) - useful one line scala implementations.
+
+[A Scala Tutorial
+for Java programmers](http://www.scala-lang.org/docu/files/ScalaTutorial.pdf) - covers the basics.
+
+[Scala By Example](http://web.mit.edu/jhawk/mnt/spo/scala/old/share/doc/scala-1.4.0.3/ScalaByExample.pdf) - covers more advanced areas of Scala.
+
+
+
 
 # Licence
 

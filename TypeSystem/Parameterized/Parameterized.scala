@@ -39,8 +39,6 @@ object Parameterized {
 
     def main(args: Array[String]){
 
-      println("Program started ...")
-
 
       // Create a Stack of Strings
 

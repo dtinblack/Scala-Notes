@@ -24,6 +24,9 @@ Series of notes about Scala's Type System ( based on [Heather Mill](https://gith
 
 [Chapter 3: Types](https://www.scala-lang.org/files/archive/spec/2.11/03-types.html#paths) - specification of the Scala language describes some of the different types with examples.
 
+[On Understanding Types,
+Data Abstraction, and Polymorphism](http://lucacardelli.name/papers/onunderstanding.a4.pdf) - paper discusses the notion of <i>type</i>.
+
 ### Licence
 
 [See Licence](/LICENSE)
