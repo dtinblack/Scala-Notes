@@ -27,6 +27,8 @@ Series of notes about Scala's Type System ( based on [Heather Mill](https://gith
 [On Understanding Types,
 Data Abstraction, and Polymorphism](http://lucacardelli.name/papers/onunderstanding.a4.pdf) - paper discusses the notion of <i>type</i>.
 
+[Type Classes as Objects and Implicits](https://ropas.snu.ac.kr/~bruno/papers/TypeClasses.pdf) - describes in detail the theory behind <i>type classes</i> in Scala and includes a discussion about <i>implicits</i>.
+
 ### Licence
 
 [See Licence](/LICENSE)

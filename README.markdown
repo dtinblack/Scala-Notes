@@ -38,7 +38,7 @@ and to help anybody else who runs into similar problems.
     <pre><code>scala -Xshow-phases
     </code></pre>
 
-# Background
+# Background references about Scala
 
 [Programming in Scala](http://www.lirmm.fr/~ducour/Doc-objets/scalabook.pdf) - first edition.
 
@@ -47,9 +47,13 @@ and to help anybody else who runs into similar problems.
 [A Scala Tutorial
 for Java programmers](http://www.scala-lang.org/docu/files/ScalaTutorial.pdf) - covers the basics.
 
-[Scala By Example](http://web.mit.edu/jhawk/mnt/spo/scala/old/share/doc/scala-1.4.0.3/ScalaByExample.pdf) - covers more advanced areas of Scala.
+[Scala By  Example](http://web.mit.edu/jhawk/mnt/spo/scala/old/share/doc/scala-1.4.0.3/ScalaByExample.pdf) - covers more advanced areas of Scala.
 
+[Everything's an object](http://blogs.tedneward.com/post/scala-pt-3-everythings-an-object/) - describes the advantages of 'Everything being an Object' with examples.
 
+[Functions as Objects as Functions](https://gleichmann.wordpress.com/2010/11/08/functional-scala-functions-as-objects-as-functions/) - describes the relationship between a function and object used by Scala. See [Functions are Objects in Scala](https://kwangyulseo.com/2014/03/03/functions-are-objects-in-scala/) - for a worked example.
+
+[Methods are not Functions](https://tpolecat.github.io/2014/06/09/methods-functions.html) - examples of <i>methods</i> and <i>values</i> and includes a discussion of <i>eta expansion</i>.
 
 
 # Licence
