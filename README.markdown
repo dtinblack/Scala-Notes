@@ -21,6 +21,7 @@ and to help anybody else who runs into similar problems.
 
 * [Type System](/TypeSystem) - examples of the different types systems.
 * [Scala - Java Interoperability](/Java-Interoperability) - accessing Java Libraries from Scala.
+* [Implicits](/Implicits) - examples of using implicits.
 * [Trees](/Trees) - examples of Tree data structures.
 * [Miscellaneous](/Miscellaneous) - collection of scala programming techniques.
 * [Mathematics](/Mathematics) - matrix and differential equations.
@@ -38,7 +39,7 @@ and to help anybody else who runs into similar problems.
     <pre><code>scala -Xshow-phases
     </code></pre>
 
-# Background references about Scala
+# Background references about Scala:
 
 [Programming in Scala](http://www.lirmm.fr/~ducour/Doc-objets/scalabook.pdf) - first edition.
 
@@ -55,6 +56,9 @@ for Java programmers](http://www.scala-lang.org/docu/files/ScalaTutorial.pdf) - 
 
 [Methods are not Functions](https://tpolecat.github.io/2014/06/09/methods-functions.html) - examples of <i>methods</i> and <i>values</i> and includes a discussion of <i>eta expansion</i>.
 
+# Examples of well written explanations:
+
+[Complex Numbers in Scala](http://www.stoyanr.com/2013/02/complex-numbers-in-scala.html) - good format and description of the concepts and features of Scala.
 
 # Licence
 

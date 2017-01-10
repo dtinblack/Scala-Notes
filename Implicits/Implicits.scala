@@ -167,6 +167,45 @@ object Implicits {
 
           show( AS( 62 ))
 
+          /* ========================= Example ============================ */
+
+          class Complex(val re: Double, val im: Double){
+
+               override def toString = re + ( if ( im < 0 ) " - " + -im else " + " + im) + "i"
+
+            def +(c: Complex) = new Complex(re + c.re, im + c.im)
+
+            def this(re: Double) = this(re,0)
+
+            def +(d: Double) = new Complex( re + d, im)
+
+            // Approximately Equal
+
+            def ~=(c: Complex ):Boolean =
+                 if ( ( (c.re - re).abs < 0.00001 ) &
+                      ( (c.im - im).abs < 0.00001) ) true
+                  else false
+
+          }
+
+          val x = new Complex(2, -3)
+          val y = new Complex( 4, 4)
+          val z = new Complex(6)
+
+          println( (x + y).toString )
+
+          println( (z + 2).toString )
+
+          // following implicit conversion required otherwise '2 + z' will not work
+
+          implicit def fromDouble(d: Double ) =  new Complex(d)
+
+          println( (2 + z).toString) // should get the same result as 'z + 2'
+
+          println( x ~= y )
+
+          println( z ~= z)
+
     } // End of def main
 
 }  // End of Implicits
