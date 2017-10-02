@@ -1,12 +1,13 @@
 // FunctionSignatures.scala
 //
+// Detailed description of the functions derived from a signature.
 //
 
 package functionsignatures
 
 object FS {
 
-   // is Sorted
+   // isSorted
 
    def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = {
 
@@ -122,7 +123,8 @@ object FS {
                     case head :: tail =>  op( head, verbose_foldRight( tail, z )( op ))
        }
 
-}
+     }
+
      // State - verbose
 
      case class Verbose_State[S, +A](run: S => (S, A)){
@@ -137,4 +139,4 @@ object FS {
                      val (s1, a ) = run(s)
                      g(a) run s1 }
 
-}
+       }

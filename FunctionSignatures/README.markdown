@@ -162,6 +162,16 @@ def map[A,B](as:List[A])(f: A => B ): List[B] = ???
 ```
 
 
+```{scala}
+
+def map[A,B](as:List[A])(f: A => B ): List[B] =
+    as match {                
+       case List() => List()  
+       case head::tail => List(f(head)) ::: map(tail)(f)
+ }
+
+```
+
 
 #### Example: flatmap
 
@@ -173,10 +183,14 @@ def flatmap[A,B](as: List[A])(f: A => List[B]): List[B] = ???
 
 ```{scala}
 
+def flatmap[A,B](as: List[A])(f: A => List[B]): List[B] =
+      as match {
+         case List() => List()           
+         case head :: tail => f( head ) ::: latmap(tail)(f)
 
+}
 
 ```
-
 
 #### Example: filter
 
@@ -229,8 +243,25 @@ case class State[S, +A](run: S => (S, A)){
 
 }
 
+```
+
+```{scala}
+   case class State[S, +A](run: S => (S, A)){
+
+        def map[B](g: A => B):State[S,B] = State {
+             s => val (s1, a) = run(s)
+             (s1, g(a))
+         }
+
+        def flatMap[B](g: A => State[S,B]): State[S,B] =
+           State{ s =>
+                val (s1, a ) = run(s)
+                g(a) run s1 }
+
+    }
 
 ```
+
 # Thanks
 
 [Implementing a higher order function that performs currying in

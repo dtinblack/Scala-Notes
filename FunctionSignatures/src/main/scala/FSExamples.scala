@@ -28,7 +28,6 @@ object FSExamples {
 
         println( new_func( 10 ))
 
-
      // curry example
 
         val curry_func = verbose_curry( func_test )
@@ -38,7 +37,6 @@ object FSExamples {
         val curry_func_one = curry_func(10)(_)
 
         println( curry_func_one(30) )
-
 
     // uncurry example
 
@@ -86,31 +84,27 @@ object FSExamples {
   // foldRight examples
 
 
-    println( verbose_foldRight[Int, Int](ls, 0)(_ + _) )
+      println( verbose_foldRight[Int, Int](ls, 0)(_ + _) )
 
-    println( verbose_foldRight[String, String](str_ls, "")(_ + _))
-
+      println( verbose_foldRight[String, String](str_ls, "")(_ + _))
 
 
    // State examples
 
-   import functionsignatures.Verbose_State
+      import functionsignatures.Verbose_State
 
-   val my_transition = Verbose_State[String, Int]( (s: String) => (s, s.size))
+      val my_transition = Verbose_State[String, Int]( (s: String) => (s, s.size))
 
-   println( my_transition run("hello, world "))
+      println( my_transition run("hello, world "))
 
+      def double_size_function(s: Int) = s * 2
 
-   def double_size_function(s: Int) = s * 2
+      println( my_transition map( double_size_function ) run("hello, map"))
 
-   println( my_transition map( double_size_function ) run("hello, map"))
+      def repeat_function(num: Int): Verbose_State[String, Int] =
+            Verbose_State( (s: String) => ( s * num, num * s.size ) )
 
-
-   def repeat_function(num: Int): Verbose_State[String, Int] =
-          Verbose_State( (s: String) => ( s * num, num * s.size ) )
-
-
-   println( my_transition flatMap(repeat_function) run("hello, flatMap "))
+      println( my_transition flatMap(repeat_function) run("hello, flatMap "))
 
 
    }
