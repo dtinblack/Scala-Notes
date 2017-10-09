@@ -7,9 +7,9 @@ I struggle with Scala's <i>function signatures</i>, for example:
 def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = ???
 
 ```
-where I can just about understand what is required for an implementation but I usually resort to 'trail and error' which is very limiting. The following notes, and accompanying software, are an attempt to develop an approach to the implementation of <i>function signatures</i> in a more systematic.
+I can just about understand what is required for an implementation but I usually resort to 'trial and error' which is very limiting. The following notes, and accompanying software, are an attempt to develop an approach to the implementation of <i>function signatures</i> in a more systematic.
 
-First is to understand what an <i>anonymous function</i> ( or can be called a <i>literal function</i>) is. Examples of anonymous functions ( a function without a name ) are:
+First step is to understand what an <i>anonymous function</i> ( or can be called a <i>literal function</i>) is. Examples of anonymous functions ( a function without a name ) are:
 
 ```{scala}
 scala> val addOne = (x:Int) => x + 1
@@ -58,11 +58,54 @@ scala> tuple(2)
 res0: (Int, Int) = (2,3)
 ```
 
-The following are typical function signatures use din Scala:
+Can anonymous functions be added to a list ?
+
+```{scala}
+scala> val f1 = (x: Int) => x * x
+f1: Int => Int
+scala> val f3 = (x: Int) => x * x
+f3: Int => Int
+scala> val f2 = (x: Int) => x + 1
+f2: Int => Int
+scala> val lst = List(f1,f2,f3)
+lst: List[Int => Int]
+scala> lst(2)(3)
+res3: Int = 9
+
+```
+
+Taking the list of functions above a list of computed values can be calculated:
+
+```{scala}
+
+def lst_value( l: List[Int => Int], v: Int): List[Int] = l match {
+
+     case List() => List()
+
+     case head :: tail => List( head( v ) ) ::: lst_value( tail, v)
+
+}
+
+println( lst_value( lst, 10 ) )
+
+// List(100, 11, 100)
+
+```
+
+The following are typical function signatures used in Scala ( the file FunctionSignatures.scala contains line-by-line description of the signatures implementation ):
 
 #### Example: Comparator Function
 
 The Comparator Function applies a comparator function to an Array:
+
+
+```{scala}
+
+def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = ???
+
+```
+
+which has the following implementation:
 
 ```{scala}
 
@@ -78,7 +121,6 @@ def isSorted[A](as: Array[A], ordered: (A,A) => Boolean): Boolean = {
 
 }
 
-
 ```
 
 #### Example: Partial Function
@@ -91,18 +133,19 @@ def partial[A,B,C](a: A, f: (A,B) = C)): B => C = ???
 
 ```
 
-which takes a a value and a two valued function and returns a function of one value. We are looking for a function that returns a type parameter C, which comes from the two valued function which now gives:
+which takes a value and a two valued function and returns a single valued function.
+We are looking for a function that returns a type parameter C, which can only come comes from the two valued function "f: (A, B) => C" which gives:
 
 ```{scala}
 
-def partial[A,B,C](a: A, f: (A,B) = C)): B => C =
+def partial[A,B,C](a: A, f: (A,B) => C)): B => C =
      b => f(a,b)
 
 ```
 
 #### Example: Currying
 
-[Currying](https://en.wikipedia.org/wiki/Currying) is the technique of taking a function that takes multiple arguments and evaluates it as a sequence of single valued functions. Note that this is different than a partial function which fixes the value of one of a functions arguments.
+[Currying](https://en.wikipedia.org/wiki/Currying) is the technique of taking a function that has multiple arguments and evaluates it as a sequence of single valued functions. Note that this is different than a partial function which fixes the value of one of the functions arguments.
 
 The function signature for a two valued function is:
 

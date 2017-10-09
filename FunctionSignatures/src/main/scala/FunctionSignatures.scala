@@ -1,6 +1,7 @@
 // FunctionSignatures.scala
 //
-// Detailed description of the functions derived from a signature.
+// Detailed description ( verbose ) of the functions derived from a
+// function signature.
 //
 
 package functionsignatures
@@ -109,7 +110,7 @@ object FS {
 
              as match {
 
-                 case List() => List()
+                 case List() => List()  // if List is empty then finish
 
                  case head :: tail => f( head ) ::: verbose_flatmap(tail)(f)
 
@@ -119,7 +120,9 @@ object FS {
 
       def verbose_foldRight[A,B](as: List[A], z: B)(op: (A, B) => B): B =
                as match {
+
                     case Nil => z
+
                     case head :: tail =>  op( head, verbose_foldRight( tail, z )( op ))
        }
 
@@ -130,7 +133,7 @@ object FS {
      case class Verbose_State[S, +A](run: S => (S, A)){
 
          def map[B](g: A => B):Verbose_State[S,B] = Verbose_State {
-               s => val (s1, a) = run(s)
+               s => val (s1, a) = run(s)  
                (s1, g(a))
          }
 
