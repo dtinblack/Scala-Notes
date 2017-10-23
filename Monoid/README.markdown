@@ -3,66 +3,6 @@
 The following are a series of notes about Monoids both as mathematical objects and programming paradigms in Scala.
 
 
-### Mathematics
-
-A monoid is a triple:
-
-$$
-\langle
-A, \oplus, \alpha
-\rangle
-$$
-
-where
-
-$A$ is a set;
-
-$\oplus$: $A \times A \rightarrow A$ is a binary function on $A$;
-
-$\alpha \in A$ is an element of $A$
-
-such that for all elements $x, y, z \in A$ the following _identity_ and _associativity_ laws hold:
-
-$x\oplus \alpha = x$
-
-$\alpha \oplus x = x$
-
-$x \oplus (y \oplus z ) = ( x \oplus y ) \oplus z$
-
-Examples of monoids:
-
-$\langle N, +, 0  \rangle$ - natural numbers
-
-$\langle N, \times , 0  \rangle$ - natural numbers
-
-$\langle A^\ast,\# ,\square  \rangle$ - finite sequences
-
-Monoids are similar to categories: $\oplus$ is like composition and $a$ is like an identity. We can view very monoid $\langle A, \oplus, \alpha \rangle$ as a category as follows:
-
-Objects - the set $A$ is the unique object of the category,
-
-Arrows - $x:A \rightarrow A$ means that $x \in A$, i.e. arrows are elements of A.
-
-Identities - $id_A: A \rightarrow A$ is uniquely defined by $id_A = a$
-
-Composition - if $x: A \rightarrow A$ and $y: A \rightarrow A$ then $y\circ x: A \rightarrow A$ is defined by $y \circ x = y \oplus x$.
-
-
-### Functional Programming
-
-A monoid takes two inputs and produces an output e.g.
-
-5 + 7 = 12,
-
-where the two inputs are "5" and "7" and the output is "12". Also, with the _associativity law_ monoids can be joined together e.g.
-
-(5 + 7) + 3 = 15
-
-where the "(5 + 7)" is the first monoid and its result is added to "3" which forms the second monoid and results in "15".
-
-Mapping between monoids e.g. $\langle A, OpA, ZeroA  \rangle$ and $\langle B, OpB, ZeroB  \rangle$, we can define a mapping from one monoid to another $f: A \Rightarrow B$, that $f(ZeroA) = ZeroB$ and $f(x OpA y) = f(x) OpB f(y)$.
-
-Remember - can use [Referential Transparency](https://en.wikipedia.org/wiki/Referential_transparency) as one of the overarching paradigms for Functional Programming.
 
 ### Scala Programming Notes
 
