@@ -28,7 +28,7 @@ See the section "Context bounds & implicitly[]" in [Scala School - Advanced Type
 
 [Type classes in Scala](https://blog.scalac.io/2017/04/19/typeclasses-in-scala.html) -     includes references to more background on polymorphism.
 
-[https://www.theguardian.com/info/developer-blog/2016/dec/22/parental-advisory-implicit-content](https://www.theguardian.com/info/developer-blog/2016/dec/22/parental-advisory-implicit-content) - clear discussion about implicit parameters and conversions. Implementation of the CanChat example, discussed in the article, is shown in the Scala file.
+[Implicits and type classes in Scala](https://www.theguardian.com/info/developer-blog/2016/dec/22/parental-advisory-implicit-content) - clear discussion about implicit parameters and conversions. Implementation of the CanChat example, discussed in the article, is shown in the Scala file.
 
 
 # Licence
